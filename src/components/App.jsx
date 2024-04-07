@@ -1,31 +1,22 @@
-import ContactForm from './ContactForm/ContactForm';
-import SearchBox from './SearchBox/SearchBox';
-import ContactList from './ContactList/ContactList';
-import { useDispatch, useSelector } from 'react-redux';
-import Title from './Title/Title';
-import s from './App.module.css';
-import { useEffect } from 'react';
-import { fetchContacts } from '../redux/contactsOps';
-import { selectError, selectIsLoading } from '../redux/contactsSlice';
-import ErrorMessage from './ErrorMessage/ErrorMessage';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Home from '../pages/Home';
+import Registration from '../pages/Registration';
+import Login from '../pages/Login';
+import Contacts from '../pages/Contacts';
+import Layout from './Layout/Layout';
+import { Toaster } from 'react-hot-toast';
 
 export default function App() {
-    const dispatch = useDispatch();
-    const isLoading = useSelector(selectIsLoading);
-    const error = useSelector(selectError);
-
-    useEffect(() => {
-        dispatch(fetchContacts());
-    }, [dispatch]);
-
     return (
-        <div className={s.container}>
-            <Title />
-            <ContactForm />
-            <SearchBox />
-            <ContactList />
-            {isLoading && <b>Request in progress...</b>}
-            {error && <ErrorMessage />}
-        </div>
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/register" element={<Registration />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+            <Toaster />
+        </Layout>
     );
 }
