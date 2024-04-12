@@ -1,5 +1,25 @@
 .book {
     display: flex;
-    justify-content: space-between;
     gap: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    .book {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .book {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .book {
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 800px;
+    }
 }
