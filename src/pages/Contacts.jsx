@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import { fetchContacts } from '../redux/contacts/operations';
 import SearchBox from '../components/SearchBox/SearchBox';
 import ContactForm from '../components/ContactForm/ContactForm';
+import Section from '../components/Section/Section';
+import css from './Contacts.module.css';
 
 export default function Contacts() {
     const isLoading = useSelector(selectIsLoading);
@@ -16,12 +18,14 @@ export default function Contacts() {
         dispatch(fetchContacts());
     }, [dispatch]);
     return (
-        <div>
-            <PageTitle>Your Contacts</PageTitle>
-            <ContactForm />
-            <SearchBox />
+        <Section>
+            <PageTitle>Your Contact Book</PageTitle>
+            <div className={css.book}>
+                <ContactForm />
+                <SearchBox />
+            </div>
             <ContactsList />
             {isLoading && <Loader />}
-        </div>
+        </Section>
     );
 }

@@ -4,7 +4,6 @@ import Registration from '../pages/Registration';
 import Login from '../pages/Login';
 import Contacts from '../pages/Contacts';
 import Layout from './Layout/Layout';
-import { Toaster } from 'react-hot-toast';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from '../redux/auth/operations';
@@ -51,7 +50,6 @@ export default function App() {
                 />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
-            <Toaster />
         </Layout>
     );
 }

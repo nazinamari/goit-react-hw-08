@@ -3,10 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 40px;
+    font-size: 20px;
     color: #333;
     border-radius: 4px;
-    /* width: 788px; */
 }
 .contact {
     display: flex;

@@ -12,9 +12,9 @@ a {
     color: #646cff;
     text-decoration: inherit;
 }
-a:hover {
+/* a:hover {
     color: #535bf2;
-}
+} */
 
 body {
     background: #e6e8fc;
@@ -58,7 +58,7 @@ button {
     font-size: 18px;
     transition: border-color 0.25s;
     height: 100%;
-    width: 200px;
+    width: 150px;
 }
 button:hover {
     border-color: #646cff;
@@ -69,10 +69,9 @@ button:focus-visible {
 }
 
 input {
-    font-size: 24px;
+    font-size: 20px;
     border: 1px solid rgb(105 116 202);
     border-radius: 4px;
-    width: 100%;
     color: #333;
     background: #edefff;
     padding: 10px;

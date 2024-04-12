@@ -3,9 +3,14 @@
     text-decoration: none;
     padding: 12px;
     font-weight: 700;
-    color: #2a363b;
+    color: black;
+    font-size: 20px;
 }
 
-.link.active {
-    color: #e84a5f;
+.isActive {
+    color: rgb(60, 72, 170);
+}
+
+.link:hover {
+    color: #535bf2;
 }

@@ -115,20 +115,21 @@ export default function RegistrationForm() {
                 <div>
                     <label className={css.label} htmlFor={confirmPasswordId}>
                         confirm password
+                        <Field
+                            type="password"
+                            name="confirmPassword"
+                            id={confirmPasswordId}
+                            className={css.input}
+                            autoComplete="off"
+                        />
                     </label>
-                    <Field
-                        type="password"
-                        name="confirmPassword"
-                        id={confirmPasswordId}
-                        className={css.input}
-                        autoComplete="off"
-                    />
-
                     <span className={css.error}>
                         <ErrorMessage name="confirmPassword" as="span" />
                     </span>
                 </div>
-                <button type="submit">Create your account</button>
+                <button type="submit" className={css.registrationBtn}>
+                    Create your account
+                </button>
             </Form>
         </Formik>
     );

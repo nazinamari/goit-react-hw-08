@@ -6,10 +6,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .error {
     color: blueviolet;
     font-size: 18px;
+}
+
+.registrationBtn {
+    margin-bottom: 16px;
 }
