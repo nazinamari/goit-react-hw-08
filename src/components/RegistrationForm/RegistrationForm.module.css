@@ -8,3 +8,8 @@
     align-items: flex-start;
     margin-bottom: 16px;
 }
+
+.error {
+    color: blueviolet;
+    font-size: 18px;
+}
