@@ -77,3 +77,11 @@ input {
     padding: 10px;
     transition: border-color 0.25s;
 }
+
+input:hover {
+    outline-color: rgb(0 84 200);
+}
+
+input:focus {
+    outline-color: rgb(0 84 200);
+}
