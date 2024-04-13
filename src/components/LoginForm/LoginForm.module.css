@@ -1,5 +1,9 @@
 .form {
     width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .label {
